@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import { AppDataSource } from "../data-source";
 import { User } from "../entity/User";
 
-// register routes
 export const getUsers = async function (req: Request, res: Response) {
     const users = await AppDataSource.getRepository(User).find()
     res.json(users)

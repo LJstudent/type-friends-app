@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm"
 import { User } from "../User"
 
 @Entity()
-export class CreateEvent {
+export class Event {
 
     @PrimaryGeneratedColumn()
     id: number
@@ -13,7 +13,7 @@ export class CreateEvent {
     @Column()
     date: Date
 
-    @ManyToOne(() => User, (user) => user.createEvent)
+    @ManyToOne(() => User, (user) => user.event)
     user: User
 
 }

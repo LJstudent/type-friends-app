@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm"
-import { CreateEvent } from "./event/CreateEvent"
+import { Event } from "./event/Event"
 
 @Entity()
 export class User {
@@ -16,7 +16,7 @@ export class User {
     @Column()
     age: number
 
-    @OneToMany(() => CreateEvent, (createEvent) => createEvent.user)
-    createEvent: CreateEvent[]
+    @OneToMany(() => Event, (event) => event.user)
+    event: Event[]
 
 }

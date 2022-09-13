@@ -1,6 +1,6 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import { CreateEvent } from "./entity/event/CreateEvent"
+import { Event } from "./entity/event/Event"
 import { User } from "./entity/User"
 
 export const AppDataSource = new DataSource({
@@ -8,11 +8,11 @@ export const AppDataSource = new DataSource({
     host: "localhost",
     port: 3301,
     username: "******",
-    password: "******",
-    database: "******",
+    password: "*******",
+    database: "*******",
     synchronize: true,
     logging: false,
-    entities: [User, CreateEvent],
+    entities: [User, Event],
     migrations: [],
     subscribers: [],
 })
